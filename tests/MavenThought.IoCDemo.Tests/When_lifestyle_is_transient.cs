@@ -1,15 +1,12 @@
-using Castle.MicroKernel.Registration;
-using MavenThought.MovieLibrary;
+﻿using Castle.MicroKernel.Registration;
 using MavenThought.Commons.Testing;
+using MavenThought.MovieLibrary;
 using SharpTestsEx;
 
 namespace MavenThought.IoCDemo.Tests
 {
-    /// <summary>
-    /// Specification when lifestyle is singleton
-    /// </summary>
     [Specification]
-    public class When_lifestyle_is_singleton : WindsorContainerSpecification
+    public class When_lifestyle_is_transient : WindsorContainerSpecification
     {
         private IMovie _actual1;
         private IMovie _actual2;
@@ -17,7 +14,10 @@ namespace MavenThought.IoCDemo.Tests
         protected override void GivenIRegister()
         {
             this.Sut.Register(
-                Component.For<IMovie>().ImplementedBy<Movie>()
+                Component
+                    .For<IMovie>()
+                    .ImplementedBy<Movie>()
+                    .LifeStyle.Transient
                 );
         }
 
@@ -33,7 +33,7 @@ namespace MavenThought.IoCDemo.Tests
         [It]
         public void Should_return_the_same_instance()
         {
-            this._actual1.Should().Be(this._actual2);
+            this._actual1.Should().Not.Be(this._actual2);
         }
     }
 }

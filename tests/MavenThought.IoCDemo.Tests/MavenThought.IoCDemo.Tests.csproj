@@ -75,6 +75,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="When_lifestyle_is_transient.cs" />
     <Compile Include="When_single_component_is_registered.cs">
       <DependentUpon>WindsorContainerSpecification.cs</DependentUpon>
     </Compile>
