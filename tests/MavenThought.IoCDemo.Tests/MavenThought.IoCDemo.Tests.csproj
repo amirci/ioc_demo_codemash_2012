@@ -75,7 +75,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="When_lifestyle_is_transient.cs" />
+    <Compile Include="When_lifestyle_is_transient.cs">
+      <DependentUpon>WindsorContainerSpecification.cs</DependentUpon>
+    </Compile>
+    <Compile Include="When_registering_same_component_twice.cs" />
+    <Compile Include="When_registering_same_component_twice_with_names.cs" />
     <Compile Include="When_single_component_is_registered.cs">
       <DependentUpon>WindsorContainerSpecification.cs</DependentUpon>
     </Compile>
@@ -83,7 +87,9 @@
       <DependentUpon>WindsorContainerSpecification.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="When_lifestyle_is_singleton.cs" />
+    <Compile Include="When_lifestyle_is_singleton.cs">
+      <DependentUpon>WindsorContainerSpecification.cs</DependentUpon>
+    </Compile>
     <Compile Include="WindsorContainerSpecification.cs" />
   </ItemGroup>
   <ItemGroup>
