@@ -1,3 +1,4 @@
+using System;
 using Castle.MicroKernel.Registration;
 using MavenThought.MovieLibrary;
 using MavenThought.Commons.Testing;
@@ -5,9 +6,6 @@ using SharpTestsEx;
 
 namespace MavenThought.IoCDemo.Tests
 {
-    /// <summary>
-    /// Specification when lifestyle is singleton
-    /// </summary>
     [Specification]
     public class When_lifestyle_is_singleton : WindsorContainerSpecification
     {

@@ -39,6 +39,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IMovieViewModel.cs" />
+    <Compile Include="MovieViewModel.cs" />
     <Compile Include="IMovieRepository.cs" />
     <Compile Include="NHMovie.cs" />
     <Compile Include="IMovie.cs" />

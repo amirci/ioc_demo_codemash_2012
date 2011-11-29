@@ -75,7 +75,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="LoggingInterceptor.cs" />
+    <Compile Include="NotifyPropertyChangedInterceptor.cs" />
     <Compile Include="When_lifestyle_is_transient.cs">
+      <DependentUpon>WindsorContainerSpecification.cs</DependentUpon>
+    </Compile>
+    <Compile Include="When_registering_logging_interceptor.cs">
+      <DependentUpon>WindsorContainerSpecification.cs</DependentUpon>
+    </Compile>
+    <Compile Include="When_registering_property_changed_interceptor.cs">
       <DependentUpon>WindsorContainerSpecification.cs</DependentUpon>
     </Compile>
     <Compile Include="When_registering_same_component_twice.cs">
@@ -90,9 +98,15 @@
     <Compile Include="When_registering_using_conventions_with_names.cs">
       <DependentUpon>WindsorContainerSpecification.cs</DependentUpon>
     </Compile>
-    <Compile Include="When_registering_with_dependencies.cs" />
-    <Compile Include="When_registering_with_service_override.cs" />
-    <Compile Include="When_registering_with_typed_factory.cs" />
+    <Compile Include="When_registering_with_dependencies.cs">
+      <DependentUpon>WindsorContainerSpecification.cs</DependentUpon>
+    </Compile>
+    <Compile Include="When_registering_with_service_override.cs">
+      <DependentUpon>WindsorContainerSpecification.cs</DependentUpon>
+    </Compile>
+    <Compile Include="When_registering_with_typed_factory.cs">
+      <DependentUpon>WindsorContainerSpecification.cs</DependentUpon>
+    </Compile>
     <Compile Include="When_single_component_is_registered.cs">
       <DependentUpon>WindsorContainerSpecification.cs</DependentUpon>
     </Compile>
