@@ -1,0 +1,9 @@
+*.user
+*.suo
+_Re*
+main/*/bin
+main/*/obj
+tests/*/bin
+tests/*/obj
+packages
+TestRe*.xml
