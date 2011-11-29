@@ -78,8 +78,19 @@
     <Compile Include="When_lifestyle_is_transient.cs">
       <DependentUpon>WindsorContainerSpecification.cs</DependentUpon>
     </Compile>
-    <Compile Include="When_registering_same_component_twice.cs" />
-    <Compile Include="When_registering_same_component_twice_with_names.cs" />
+    <Compile Include="When_registering_same_component_twice.cs">
+      <DependentUpon>WindsorContainerSpecification.cs</DependentUpon>
+    </Compile>
+    <Compile Include="When_registering_same_component_twice_with_names.cs">
+      <DependentUpon>WindsorContainerSpecification.cs</DependentUpon>
+    </Compile>
+    <Compile Include="When_registering_using_conventions.cs">
+      <DependentUpon>WindsorContainerSpecification.cs</DependentUpon>
+    </Compile>
+    <Compile Include="When_registering_using_conventions_with_names.cs">
+      <DependentUpon>WindsorContainerSpecification.cs</DependentUpon>
+    </Compile>
+    <Compile Include="When_registering_with_dependencies.cs" />
     <Compile Include="When_single_component_is_registered.cs">
       <DependentUpon>WindsorContainerSpecification.cs</DependentUpon>
     </Compile>

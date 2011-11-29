@@ -39,6 +39,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="NHMovie.cs" />
     <Compile Include="IMovie.cs" />
     <Compile Include="IMovieFactory.cs" />
     <Compile Include="Movie.cs" />
