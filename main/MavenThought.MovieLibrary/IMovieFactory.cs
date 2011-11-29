@@ -1,4 +1,6 @@
-﻿namespace MavenThought.MovieLibrary
+﻿using System;
+
+namespace MavenThought.MovieLibrary
 {
     public interface IMovieFactory
     {
