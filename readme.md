@@ -1,14 +1,22 @@
-** About **
+## About
+
 Demo of advanced features for IoC Castle Windsor
+
 CodeMash 2012
+
 by Amir Barylko
 
-** Contact **
+## Contact
+
 Email: amir@barylko.com
+
 Twitter: @abarylko
 
-** Instructions **
+## Instructions
+
 Run install.bat
+
 Open VS and run tests.
+
 
 Enjoy!
