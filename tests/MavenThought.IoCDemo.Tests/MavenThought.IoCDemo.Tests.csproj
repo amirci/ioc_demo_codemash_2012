@@ -75,6 +75,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="4.Startable\When_registering_startable_type.cs" />
     <Compile Include="6.Aop\LoggingInterceptor.cs" />
     <Compile Include="6.Aop\NotifyPropertyChangedInterceptor.cs" />
     <Compile Include="0.Basics\When_lifestyle_is_singleton.cs" />
@@ -103,9 +104,7 @@
       <Name>MavenThought.MovieLibrary</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="4.Startable\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
