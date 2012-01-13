@@ -1,4 +1,3 @@
-using System;
 using Castle.MicroKernel.Registration;
 using MavenThought.MovieLibrary;
 using MavenThought.Commons.Testing;

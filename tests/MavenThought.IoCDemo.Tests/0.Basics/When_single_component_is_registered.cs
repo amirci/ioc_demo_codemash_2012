@@ -11,9 +11,8 @@ namespace MavenThought.IoCDemo.Tests
 
         protected override void GivenIRegister()
         {
-            Sut.Register(
-                Component.For<Movie>() // Movie class registered
-                );
+            // Movie class registered
+            Sut.Register(Component.For<Movie>());
         }
 
         protected override void WhenIRun()

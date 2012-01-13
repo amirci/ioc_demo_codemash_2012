@@ -1,5 +1,4 @@
-﻿using System;
-using System.Linq;
+﻿using System.Linq;
 using Castle.MicroKernel.Registration;
 using MavenThought.Commons.Testing;
 using MavenThought.MovieLibrary;
@@ -7,7 +6,6 @@ using SharpTestsEx;
 
 namespace MavenThought.IoCDemo.Tests
 {
-    [Specification]
     public class When_registering_with_dependencies : WindsorContainerSpecification
     {
         private IMovieRepository _repository;
@@ -15,8 +13,11 @@ namespace MavenThought.IoCDemo.Tests
         protected override void GivenIRegister()
         {
             this.Sut.Register(
-                    Component.For<IMovieFactory>().ImplementedBy<NHMovieFactory>(),
-                    Component.For<IMovieRepository>().ImplementedBy<SimpleMovieRepository>()
+                Component
+                    .For<IMovieFactory>()
+                    .ImplementedBy<RottenTomatoesFactory>()
+                    .DependsOn(new {apiKey = "someAssignedKey"}),
+                Component.For<IMovieRepository>().ImplementedBy<SimpleMovieRepository>()
                 );
         }
 
@@ -29,10 +30,10 @@ namespace MavenThought.IoCDemo.Tests
         /// Checks that is the right factory
         /// </summary>
         [It]
-        public void Should_return_all_nh_movies()
+        public void Should_return_all_rt_movies()
         {
             this._repository.List
-                .All(x => x.GetType() == typeof(NHMovie))
+                .All(x => x.GetType() == typeof(RottenTomatoesMovie))
                 .Should()
                 .Be
                 .True();

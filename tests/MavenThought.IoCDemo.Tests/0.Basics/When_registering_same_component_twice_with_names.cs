@@ -1,4 +1,5 @@
-﻿using Castle.MicroKernel.Registration;
+﻿using System;
+using Castle.MicroKernel.Registration;
 using MavenThought.Commons.Testing;
 using MavenThought.MovieLibrary;
 using SharpTestsEx;
